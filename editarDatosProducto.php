@@ -14,12 +14,6 @@ class metodos{
     }
 }
 $id=$_GET['id'];
-/*if(!isset($_SESSION['active'])){
-    echo '<script>
-            alert ("Registro eliminado con éxito.");
-            window.location="./productos.php"
-            </script>';
-}*/
 $query=mysqli_query($connection,"SELECT * FROM productos WHERE idProducto = '$id'");
 $result=mysqli_num_rows($query);
 if($result>0){
